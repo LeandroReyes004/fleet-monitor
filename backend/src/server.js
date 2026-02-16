@@ -50,6 +50,8 @@ conectar()
     });
   })
   .catch((err) => {
-    console.error('No se pudo conectar a la base de datos:', err.message);
+    console.error('❌ No se pudo conectar a la base de datos:');
+    console.error('   Mensaje:', err.message);
+    console.error('   DATABASE_URL configurada:', process.env.DATABASE_URL ? 'SÍ' : 'NO');
     process.exit(1);
   });
