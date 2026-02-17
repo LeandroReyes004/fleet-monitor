@@ -4,7 +4,8 @@ import axios from 'axios';
 import Mapa from './components/Mapa';
 import ListaVehiculos from './components/ListaVehiculos';
 
-const socket = io('http://localhost:3001');
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const socket = io(API_URL);
 
 export default function App() {
   const [vehiculos, setVehiculos] = useState([]);
@@ -38,7 +39,7 @@ export default function App() {
 
   async function cargarVehiculos() {
     try {
-      const res = await axios.get('/api/vehicles');
+      const res = await axios.get(`${API_URL}/api/vehicles`);
       setVehiculos(res.data.datos);
     } catch (err) {
       console.error('Error cargando vehículos:', err);
