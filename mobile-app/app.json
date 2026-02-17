@@ -4,7 +4,6 @@
     "slug": "fleet-monitor",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
     "splash": {
       "backgroundColor": "#1a1a2e"
@@ -29,6 +28,11 @@
       ],
       "expo-asset",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "414b6886-a80d-4c2f-a34d-cd803329ef82"
+      }
+    }
   }
 }
