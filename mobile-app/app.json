@@ -10,6 +10,7 @@
       "backgroundColor": "#1a1a2e"
     },
     "android": {
+      "package": "com.fleetmonitor.app",
       "adaptiveIcon": {
         "backgroundColor": "#1a1a2e"
       },
